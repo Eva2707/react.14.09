@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Message = ({count}) => {
+const Message = ({ author, message }) => {
     return (
-        <div>
-            <h3>Hallo, ich bin ein Component</h3>
-            <p>{count}</p>
-        </div>
+        <li>
+            <span>{`${author}: ${message}`}</span>
+        </li>
     );
-}
+
+};
 export default Message

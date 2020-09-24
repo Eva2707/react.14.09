@@ -1,15 +1,8 @@
 import React from 'react';
-import cn from 'classnames';
 
-const Message = ({ author, message, className }) => {
+const Message = ({ author, message }) => {
   return (
-    <li
-      className={cn('list', {
-        'author-bot': author === 'Bot',
-        author: author !== 'Bot',
-        className,
-      })}
-    >
+    <li>
       <span>{`${author}: ${message}`}</span>
     </li>
   );

@@ -21,11 +21,10 @@ class HelloMessage extends Component {
     componentDidUpdate(prevProps, prevState) {
         console.log(123)
         const { messages} = this.state;
-        if (messages.length % 2 === 0){
+        if (messages.author !== 'Bot'){
             this.addMessage({author: "Botik", message: " hi, i am Botik, your friend, i will talk with you )" })
         }
     }
-
     render() {
         const { messages } = this.state;
         return (

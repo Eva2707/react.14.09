@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
 
 class MessageField extends Component {
     state = {
@@ -31,7 +32,7 @@ class MessageField extends Component {
                     onChange={this.onChange}
                     value={author}
                     autoComplete="off"/>
-                    <span> author</span>
+                    <label htmlFor="namedInput">author:</label>
                 </div>
                 <div>
                     <input
@@ -48,6 +49,8 @@ class MessageField extends Component {
     }
 }
 
-MessageField.propTypes = {};
+MessageField.propTypes = {
+    prop: PropTypes,
+};
 
 export default MessageField;
